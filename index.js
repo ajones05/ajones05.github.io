@@ -1,7 +1,7 @@
 var LaunchDarkly = require('ldclient-node');
 ldclient = LaunchDarkly.init('sdk-12df30fb-03d7-44b3-9885-d26b80c2bce3')
 ldclient.once('ready', function() {
-  ldclient.variation('your.flag.key', {key: 'user@test.com'}, false, function(err, showFeature) {
+  ldclient.variation('new-image', {key: 'amjjunk@gmail.com'}, false, function(err, showFeature) {
     if (showFeature) {
         // application code to show the feature
         <iframe src="https://drive.google.com/file/d/1z8gpaaYEUmhgC9CNhhsbLdSCl463iDdm/preview" width="320" height="240"></iframe>
