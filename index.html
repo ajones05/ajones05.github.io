@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html>
-<title>Playing with LaunchDarkly</title>
-<head>
-  <script src="hello.js"></script>
-</head>
-<body>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LaunchDarkly tutorial</title>
+    <script src="https://app.launchdarkly.com/snippet/ldclient.min.js"></script>
+  </head>
+  <body>
+  <script>
+  var user = {
+    firstName: 'Bob',
+    lastName: 'Loblaw',
+    key: 'bob@example.com',
+    custom: {
+      groups: 'beta_testers'
+    }
+  };
+
+  var div = document.createElement('div');
+  document.body.appendChild(div);
+
+  div.appendChild(document.createTextNode('Initializing...'));
+
+  var ldclient = LDClient.initialize('5bd7457c61d526407fa9e337', user);
+
+  function render() {
+    var shouldShow = ldclient.variation('new-image', false);
+    var label = (shouldShow ? 'Showing' : 'Not showing') + ' your feature to ' + user.key;
+    div.replaceChild(document.createTextNode(label), div.firstChild);
+  }
+
+  ldclient.on('ready', render);
+  ldclient.on('change', render);
+</script>
+  </body>
 </html>
