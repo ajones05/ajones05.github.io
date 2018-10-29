@@ -1,0 +1,22 @@
+{
+  "name": "ld_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajones05/ajones05.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajones05/ajones05.github.io/issues"
+  },
+  "homepage": "https://github.com/ajones05/ajones05.github.io#readme",
+  "dependencies": {
+    "ldclient-node": "^5.5.0"
+  }
+}
